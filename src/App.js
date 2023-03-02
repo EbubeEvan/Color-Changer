@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Palette from './Palette';
+import Collector from './Collector';
+import { useState } from 'react';
 
 function App() {
+  const [entry , setEntry] = useState('')
+  const [hexValue, setHexValue] = useState('')
+  const [isDarkText, setIsDarkText] = useState(true)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Palette
+      entry={entry}
+      hexValue={hexValue}
+      isDarkText={isDarkText}
+     />
+     <Collector
+        entry={entry}
+        setEntry={setEntry}
+        setHexValue={setHexValue}
+        isDarkText={isDarkText}
+        setIsDarkText={setIsDarkText}
+     /> 
     </div>
   );
 }
