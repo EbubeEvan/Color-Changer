@@ -6,7 +6,7 @@ const Palette = ({entry, hexValue, isDarkText}) => {
         backgroundColor : entry,
         color: isDarkText ? 'black' : 'white'
         }}>
-        <p>{entry ? entry : 'Empty Value'}</p>
+        <p>{entry ? entry : 'Enter Colour'}</p>
 
         <p>{hexValue ? hexValue : null}</p>
     </div>
